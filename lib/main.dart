@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:freeu2/routes.dart';
+import 'package:freeu2/resources/routes/routes.dart';
 import 'package:get/get.dart';
 
 void main() {
