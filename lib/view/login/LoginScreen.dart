@@ -19,7 +19,7 @@ class LoginScreen extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         // Dismiss the keyboard
-        FocusScope.of(context).unfocus();
+        FocusScope.of(context).unfocus(); 
       },
       child: SafeArea(
         child: DefaultTabController(
