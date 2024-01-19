@@ -19,7 +19,7 @@ class LoginScreen extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         // Dismiss the keyboard
-        FocusScope.of(context).unfocus(); 
+        FocusScope.of(context).unfocus();
       },
       child: SafeArea(
         child: DefaultTabController(
@@ -80,6 +80,17 @@ class LoginScreen extends StatelessWidget {
                           height: 10.h,
                         ),
                         TextFormField(
+                          validator: (value) {
+                            if (value!.isEmpty) {
+                              return 'Enter your email address';
+                            }
+                            if (!RegExp(
+                                    r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$')
+                                .hasMatch(value)) {
+                              return 'Enter a Valid Email address';
+                            }
+                            return null;
+                          },
                           controller: _iemail,
                           decoration: InputDecoration(
                             prefixIcon: Icon(Icons.mail_outline),

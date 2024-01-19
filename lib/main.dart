@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
           // fontFamily: 'Exo2',
         ),
         debugShowCheckedModeBanner: false,
-        initialRoute: '/loginScreen',
+        initialRoute: '/mainScreen',
         getPages: AppRoutes.appRoutes(),
       ),
       designSize: Size(390, 844),

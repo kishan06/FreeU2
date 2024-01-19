@@ -1,3 +1,4 @@
+import 'package:freeu2/view/main_screens/main_screen.dart';
 import 'package:get/get.dart';
 
 import '../../view/login/ForgotPScreen.dart';
@@ -33,6 +34,10 @@ class AppRoutes {
         GetPage(
           name: RouteName.resetPassScreen,
           page: () => const ResetPassScreen(),
+        ),
+        GetPage(
+          name: RouteName.mainScreen,
+          page: () => const MainScreen(),
         ),
       ];
 }
